@@ -40,5 +40,45 @@
             "preco": 39.99,
             "descricao": "Teclado Membrana Fortrek K15, ABNT2, USB, Preto, 84948"
         }
+        {
+            "id": 6,
+            "nome": "Cadeira Gamer Mancer ",
+            "categoria": "Cadeira",
+            "imagem":"Cadeira-Gamer-Mancer.png",
+            "preco": 799.99,
+            "descricao": "Espuma Moldada, Braco 3D, Tecido, Preto e Roxo, MCR-TRC-FB"
+        }
+        {
+            "id": 7 ,
+            "nome": "Poltrona Gamer Cougar Ranger One ",
+            "categoria": "Cadeira",
+            "imagem":"Cadeira-Poltrona-Gamer-Cougar-Ranger.png",
+            "preco": 1499.99,
+            "descricao": "Poltrona com acochoamento de mil fios"
+        }
+        {
+            "id": 8,
+            "nome": "Cadeira Gamer DT3",
+            "categoria": "Cadeira",
+            "imagem":"Cadeira-Gamer-DT3-Vita.png",
+            "preco": 949.99,
+            "descricao": "Cadeira de Espuma, Laranja, com apoio de braço"
+        }
+        {
+            "id": 9,
+            "nome": "Cadeira Ergonomica TGIF T0 ",
+            "categoria": "Cadeira",
+            "imagem":"Cadeira-Ergonomica-TGIF-T0.png",
+            "preco": 3399.99,
+            "descricao": "Espuma Moldada, Braco 3D, Preto, T0-N"
+        }
+        {
+            "id": 10,
+            "nome": "Cadeira Ergonomica TGIF ACE,  ",
+            "categoria": "Cadeira",
+            "imagem":"Cadeira-Ergonomica-TGIF.png",
+            "preco":  2699.99,
+            "descricao": "Apoio de Braco 6D, Branco, ACE-W-6D"
+        }
     ]
 }
