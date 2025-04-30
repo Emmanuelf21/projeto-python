@@ -79,6 +79,53 @@
             "imagem":"Cadeira-Ergonomica-TGIF.png",
             "preco":  2699.99,
             "descricao": "Apoio de Braco 6D, Branco, ACE-W-6D"
-        }
+        },
+
+        {
+            "id": 11,
+            "nome": " Headset Gamer Havit Rosa",
+            "categoria": "Headset",
+            "imagem":"Headset-rosinha-gamer-1.png",
+            "preco":  189.99,
+            "descricao": " H2002d, Drivers 53mm, Rosa, HVGMH-H2002D-PK"
+        },
+
+        {
+            "id": 12,
+            "nome": " Headset Gamer Havit Branco",
+            "categoria": "Headset",
+            "imagem":"Headset-branquinho-gamer-2.png",
+            "preco":  179.99,
+            "descricao": " H2002d, Drivers 53mm, Branco, HVGMH-H2002D-PK"
+        },
+
+        {
+            "id": 13,
+            "nome": " Headset Gamer Havit Rgb",
+            "categoria": "Headset",
+            "imagem":"Headset-branquinho-gamer-3.png",
+            "preco":  199.99,
+            "descricao": " H2002d, Drivers 53mm, RGB, HVGMH-H2002D-PK"
+        },
+
+        {
+            "id": 14,
+            "nome": " Headset Gamer Logitec",
+            "categoria": "Headset",
+            "imagem":"Headset-azulzinho-gamer-4.png",
+            "preco":  799.99,
+            "descricao": "G733 Lightspeed 7.1 Wireless RGB Azul, 981-000942"
+        },
+
+        {
+            "id": 15,
+            "nome": " Headset Gamer Logitec",
+            "categoria": "Headset",
+            "imagem":"Headset-de-cria-gamer-5.png",
+            "preco":  99.99,
+            "descricao": "H111 Stereo Preto, 981-000612"
+        } 
+
     ]
+
 }
