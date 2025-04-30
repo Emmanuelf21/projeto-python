@@ -42,7 +42,7 @@
         },
         {
             "id": 6,
-            "nome": "Cadeira Gamer Mancer ",
+            "nome": "Cadeira Gamer Mancer",
             "categoria": "Cadeira",
             "imagem":"Cadeira-Gamer-Mancer.png",
             "preco": 799.99,
@@ -50,7 +50,7 @@
         },
         {
             "id": 7 ,
-            "nome": "Poltrona Gamer Cougar Ranger One ",
+            "nome": "Poltrona Gamer Cougar Ranger One",
             "categoria": "Cadeira",
             "imagem":"Cadeira-Poltrona-Gamer-Cougar-Ranger.png",
             "preco": 1499.99,
@@ -66,7 +66,7 @@
         },
         {
             "id": 9,
-            "nome": "Cadeira Ergonomica TGIF T0 ",
+            "nome": "Cadeira Ergonomica TGIF T0",
             "categoria": "Cadeira",
             "imagem":"Cadeira-Ergonomica-TGIF-T0.png",
             "preco": 3399.99,
@@ -74,7 +74,7 @@
         },
         {
             "id": 10,
-            "nome": "Cadeira Ergonomica TGIF ACE,  ",
+            "nome": "Cadeira Ergonomica TGIF ACE",
             "categoria": "Cadeira",
             "imagem":"Cadeira-Ergonomica-TGIF.png",
             "preco":  2699.99,
