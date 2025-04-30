@@ -1,7 +1,7 @@
 {
     "produtos": [
         {
-            "id": ,
+            "id": 1,
             "nome": "Teclado HyperX Alloy Origins",
             "categoria": "Teclado",
             "imagem": "hyperx.jpg",
@@ -9,7 +9,7 @@
             "descricao": "Teclado Mecanico Gamer HyperX Alloy Origins, RGB, ABNT2, Switch Red, Preto, 4P4F6A2AC4"
         },
         {
-            "id": ,
+            "id": 2,
             "nome": "Teclado Redragon Phantom PRO",
             "categoria": "Teclado",
             "imagem":"phantom.jpg",
@@ -17,7 +17,7 @@
             "descricao": "Teclado Mecanico Redragon Phantom Pro, RGB, Switch Marrom, Cinza e Creme, K629CGO-PRO-M-PT-BROWN"
         },
         {
-            "id": ,
+            "id": 3,
             "nome": "Teclado Logitech G915 X",
             "categoria": "Teclado",
             "imagem":"g915.jpg",
@@ -25,7 +25,7 @@
             "descricao": "Teclado Mecanico Gamer Logitech G915 X LightSpeed TKL, RGB, Bluetooth, Switch Marrom, Branco, 920-012732"
         },
         {
-            "id": ,
+            "id": 4,
             "nome": "Teclado Akko 3098 Neon",
             "categoria": "Teclado",
             "imagem":"akko.jpg",
@@ -33,7 +33,7 @@
             "descricao": "Teclado Mecanico Gamer Akko 3098 Neon, Switch Cream Yellow, AKKO-3098-YELLOW"
         },
         {
-            "id": ,
+            "id": 5,
             "nome": "Teclado Fortrek K15",
             "categoria": "Teclado",
             "imagem":"fortrek.jpg",
