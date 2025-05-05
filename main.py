@@ -16,6 +16,12 @@ def getTeclados():
     data = json.loads(dadosProd.read())
     return filtrar(data, 'Teclado')
 
+@app.get("/Cadeira")
+def getCadeira():
+    dadosProd = open(pathProdutos)
+    data = json.loads(dadosProd.read())
+    return filtrar(data, 'Cadeiras')
+
 def filtrar(data, categoria: str):
     listaProdutos = []
     for produto in data['produtos']:
