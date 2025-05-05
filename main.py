@@ -17,7 +17,13 @@ def getTeclados():
     dadosProd = open(pathProdutos)
     data = json.loads(dadosProd.read())
     return filtrar(data, 'Teclado')
-
+  
+@app.get("/produtos/Cadeira")
+def getCadeira():
+    dadosProd = open(pathProdutos)
+    data = json.loads(dadosProd.read())
+    return filtrar(data, 'Cadeiras')
+  
 #Adicionar o get de cada categoria de produtos
 
 @app.get("/carrinho")
@@ -45,7 +51,6 @@ def deletePCar(id: int): #deletar um produto do carrinho
     data = json.loads(dadosCar.read())
     # Terminar o Delete
     
-
 @app.delete("/carrinho")
 def deleteCarrrinho(): #deletar o carrinho
     dadosCar = open(pathCarrinho)
