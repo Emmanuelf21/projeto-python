@@ -125,6 +125,50 @@
             "preco":  99.99,
             "descricao": "H111 Stereo Preto, 981-000612"
         } 
+          {
+            "id": 16,
+            "nome": "Monitor Gamer AOC 27",
+            "categoria": "Monitor",
+            "imagem":"MonitorAOC.jpg",
+            "preco":  1299.99,
+            "descricao": "Monitor Gamer AOC 27 Pol, 180Hz 0,5ms IPS Base Ajustável 27G4/P"
+        },
+
+        {
+            "id": 17,
+            "nome": "Monitor Gamer Duex 24",
+            "categoria": "Monitor",
+            "imagem":"MonitorDuex.jpg",
+            "preco":  799.99,
+            "descricao": "Monitor Gamer Duex, 24 Pol, IPS, FHD, 1ms, 165Hz, FreeSync/G-Sync, HDMI/DP, DXMO24F165S"
+        },
+
+        {
+            "id": 18,
+            "nome": "Monitor Gamer Gigabyte GS27QC",
+            "categoria": "Monitor",
+            "imagem":"MonitorGamerGigabyte.jpg",
+            "preco":  1499.99,
+            "descricao": "Monitor Gamer Gigabyte GS27QC, 27 Pol, VA, QHD, 1ms, 165Hz, DP/HDMI, GS27QC"
+        },
+
+        {
+            "id": 19,
+            "nome": "Monitor Samsung Odyssey ARK",
+            "categoria": "Monitor",
+            "imagem":"MonitorSansungOdyssesy.jpg",
+            "preco":  24999.90,
+            "descricao": "Monitor Samsung Odyssey ARK 2nd Gen, 55 Pol. VA Curvo, UHD 4K, 1ms, 165Hz, FreeSync Premium PRO, HDMI/DP, LS55CG97WNLXZD"
+        },
+
+        {
+            "id": 20,
+            "nome": "Monitor Gamer TGT Altay",
+            "categoria": "Monitor",
+            "imagem":"MonitorTGT.jpg",
+            "preco":  819.99,
+            "descricao": "Monitor Gamer TGT Altay TS4, 27 Pol, IPS, FHD, 1ms, 180Hz, FreeSync, HDMI/DP, TGT-ATTS4-BL02"
+        }
 
     ]
 
