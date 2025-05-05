@@ -12,11 +12,13 @@ def getProdutos():
     data = json.loads(dadosProd.read())
     return data
 
-@app.get("/teclados")
+@app.get("/produtos/teclados")
 def getTeclados():
     dadosProd = open(pathProdutos)
     data = json.loads(dadosProd.read())
     return filtrar(data, 'Teclado')
+
+#Adicionar o get de cada categoria de produtos
 
 @app.get("/carrinho")
 def getCarrinho():
