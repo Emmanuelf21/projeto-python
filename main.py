@@ -36,7 +36,6 @@ def getCarrinho():
 def postCarrinho(): #adicionar produto no carrinho
     dadosCar = open(pathCarrinho)
     data = json.loads(dadosCar.read())
-    
 
 
 @app.put("/carrinho")
