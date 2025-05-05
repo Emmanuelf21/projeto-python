@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+.container-cabecalho{
+    height: 150px;
+    padding: 10px;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-cabecalho .flex-column{
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
