@@ -21,7 +21,7 @@ def getProdutos():
     data = json.loads(dadosProd.read())
     return data
 
-@app.get("/produtos/teclados")
+@app.get("/produtos/Teclados")
 def getTeclados():
     dadosProd = open(pathProdutos)
     data = json.loads(dadosProd.read())
