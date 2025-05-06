@@ -25,6 +25,11 @@ def getCadeira():
     return filtrar(data, 'Cadeiras')
   
 #Adicionar o get de cada categoria de produtos
+@app.get("/produtos/Monitor")
+def getCarrinho():
+    dadosProd = open(pathProdutos)
+    data = json.loads(dadosProd.read())
+    return filtrar(data, 'Monitor')
 
 @app.get("/carrinho")
 def getCarrinho():
