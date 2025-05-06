@@ -1,10 +1,19 @@
 from fastapi import FastAPI
 import json
 from produto import Produto
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 pathProdutos = "./data/produtos.json"
 pathCarrinho = "./data/carrinho.json"
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Permite requisições de qualquer origem (use com cuidado em produção)
+    allow_credentials=True,
+    allow_methods=["*"],  # Permite todos os métodos (GET, POST, PUT, DELETE, etc.)
+    allow_headers=["*"],  # Permite todos os headers
+)
 
 @app.get("/")
 def getProdutos():
