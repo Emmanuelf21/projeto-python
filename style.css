@@ -2,15 +2,17 @@
     margin: 0;
     box-sizing: border-box;
     width: 100%;
+    color: white;
 }
 body{
-    background: #ffffff;
+    background: #3d3d3d;
 }
 
 .container-cabecalho{
     height: 150px;
     padding: 20px;
     background: #3d3d3d;
+    font-size: 1.2rem;
 }
 
 .flex-column{
@@ -30,8 +32,14 @@ body{
     justify-content: flex-end;
     gap: 20px;
 }
+.logo{
+    background-image: url('./imagens/Gemini_Generated_Image_7u8zv7u8zv7u8zv7.png');
+    width: 400px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
-.container-cabecalho .flex-column .logo,
 .container-cabecalho .flex-column .links
 {
     width: fit-content;
@@ -64,11 +72,24 @@ body{
 }
 
 .card{
-    width: 150px;
-    height: fit-content;
+    width: 200px;
+    height: 350px;
 }
 
 .card img{
-    /* width: 200px; */
+    width: 200px;
+    height: 200px;
+    background: white;
     object-fit: contain;
+}
+.card .flex-column{
+    gap: 10px;
+    
+}
+.card h4{
+    /* color: #3d3d3d; */
+}
+
+.card p{
+    color: #adadad;
 }
