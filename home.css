@@ -1,0 +1,35 @@
+.container-conteudo{
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.container-conteudo h2{
+    width: fit-content;
+}
+
+.produtos{
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 200px;
+    height: 350px;
+}
+
+.card img{
+    width: 200px;
+    height: 200px;
+    background: white;
+    object-fit: contain;
+}
+.card .flex-column{
+    gap: 10px;
+    
+}
+
+.card p{
+    color: #adadad;
+}
