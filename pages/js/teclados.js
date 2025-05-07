@@ -15,7 +15,7 @@ async function getData() {
                         <p class="preco">R$ ${teclado.preco}</p>
                     </div>
                     <div class="div-btn">
-                        <button id=${teclado.id}>Adicionar ao carrinho</button>
+                        <button id=${teclado.id} class="btn-card">Adicionar ao carrinho</button>
                     </div>
                 </div>
             `
