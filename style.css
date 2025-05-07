@@ -33,13 +33,16 @@ body{
     gap: 20px;
 }
 .logo{
-    background-image: url('./imagens/Gemini_Generated_Image_7u8zv7u8zv7u8zv7.png');
+    /* background-image: url('./imagens/LOGO.jpg'); */
     width: 400px;
-    height: 100px;
-    background-size: contain;
+    height: fit-content;
+    padding: 20px;
     background-repeat: no-repeat;
 }
-
+.logo h2{
+    width: fit-content; 
+    margin: auto;   
+}
 .container-cabecalho .flex-column .links
 {
     width: fit-content;
@@ -53,5 +56,10 @@ body{
 {
     text-decoration: none;
     color: white;
+}
+
+.container-cabecalho .flex-column .links a:hover
+{
+    color: #f8e80b;
 }
 
