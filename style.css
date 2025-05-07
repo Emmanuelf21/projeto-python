@@ -63,3 +63,53 @@ body{
     color: #f8e80b;
 }
 
+.carrinho{
+    width: 10%;
+    background: white;
+    height: 70%;
+    position: fixed;
+    right: 0;
+    top: 15%;
+    overflow-y: scroll;
+    flex-direction: column;
+    gap: 30px;
+    padding: 2rem 0 0 2rem;
+}
+
+.oculto{
+   display: none;
+}
+
+.visivel{
+   display: flex;
+}
+
+.mini-card{
+   width: 100%;
+   height: fit-content;
+   position: relative;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap:10px;
+   align-items: center;
+}
+
+.mini-card img{
+   width: 100px;
+}
+
+.mini-card>div{
+   align-items: center;
+   width: 120px;
+}
+
+.mini-card>div button{
+   width: 2rem;
+   height: 2rem;
+   border-radius: 50%;
+   cursor: pointer;
+   border: none;
+   background: #eee;
+   text-align: center;
+}

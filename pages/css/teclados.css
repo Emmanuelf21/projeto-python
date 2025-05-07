@@ -35,10 +35,14 @@
     padding: 20px 0px;
 }
 
+.container-teclados h2{
+    text-align: center;
+}
 .container-produtos .card{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 .div-btn{
     height: 100%;
     display: flex;

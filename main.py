@@ -31,7 +31,7 @@ def getTeclados():
 def getCadeira():
     dadosProd = open(pathProdutos)
     data = json.loads(dadosProd.read())
-    return filtrar(data, 'Cadeiras')
+    return filtrar(data, 'Cadeira')
   
 #Adicionar o get de cada categoria de produtos
 @app.get("/produtos/Monitor")
