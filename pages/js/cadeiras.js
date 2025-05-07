@@ -3,7 +3,7 @@ async function getData() {
         const res = await fetch("http://127.0.0.1:8000/produtos/Cadeira");
         const data = await res.json();
 
-        const container = document.querySelector(".container-Cadeiras");
+        const container = document.querySelector(".container-cadeiras");
 
         data.forEach(Cadeiras => {
             container.innerHTML += `
