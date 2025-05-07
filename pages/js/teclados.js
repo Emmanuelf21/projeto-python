@@ -7,12 +7,15 @@ async function getData() {
 
         data.forEach(teclado => {
             container.innerHTML += `
-            <div class="card">
+            <div class="card flex-column">
                     <img src="../imagens/${teclado.imagem}" alt="">
                     <div class="flex-column">
                         <h4>${teclado.nome}</h4>
                         <p>${teclado.descricao}</p>
-                        <p>R$ ${teclado.preco}</p>
+                        <p class="preco">R$ ${teclado.preco}</p>
+                    </div>
+                    <div class="div-btn">
+                        <button id=${teclado.id}>Adicionar ao carrinho</button>
                     </div>
                 </div>
             `
