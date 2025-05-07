@@ -7,6 +7,15 @@
  - Link de acesso do host local: http://127.0.0.1:8000/docs
 <hr>
 
+##Integrantes
+ - Emmanuel Franco (monitor)
+ - João Henrique (monitor)
+ - Romulo
+ - Matheus (Scrum Master)
+ - Isabella
+
+<hr>
+
 ## Ferramentas
  - HTML
  - CSS
@@ -14,3 +23,12 @@
  - Python
  - FastAPI
  - Json
+   
+<hr>
+
+## Links
+ - [Instalação FastAPI](https://mesquite-tumble-17b.notion.site/FastAPI-13542cb686c18032a625e4f1463f64f2)
+ - [Ideia do Projeto](https://mesquite-tumble-17b.notion.site/Projeto-Monitor-e-commerce-1c742cb686c180a9b025dce72f3bb1a8)
+
+<hr>
+
