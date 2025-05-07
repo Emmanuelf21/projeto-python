@@ -5,17 +5,17 @@ async function getData() {
 
         const container = document.querySelector(".container-cadeiras");
 
-        data.forEach(Cadeiras => {
+        data.forEach(Cadeira => {
             container.innerHTML += `
             <div class="card flex-column">
-                    <img src="../imagens/${Cadeiras.imagem}" alt="">
+                    <img src="../imagens/${Cadeira.imagem}" alt="">
                     <div class="flex-column">
-                        <h4>${Cadeiras.nome}</h4>
-                        <p>${Cadeiras.descricao}</p>
-                        <p class="preco">R$ ${Cadeiras.preco}</p>
+                        <h4>${Cadeira.nome}</h4>
+                        <p>${Cadeira.descricao}</p>
+                        <p class="preco">R$ ${Cadeira.preco}</p>
                     </div>
                     <div class="div-btn">
-                        <button id=${Cadeiras.id} class="btn-card">Adicionar ao carrinho</button>
+                        <button id=${Cadeira.id} class="btn-card">Adicionar ao carrinho</button>
                     </div>
                 </div>
             `
