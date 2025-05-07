@@ -21,7 +21,7 @@ def getProdutos():
     data = json.loads(dadosProd.read())
     return data
 
-@app.get("/produtos/teclados")
+@app.get("/produtos/Teclados")
 def getTeclados():
     dadosProd = open(pathProdutos)
     data = json.loads(dadosProd.read())
@@ -39,6 +39,12 @@ def getCarrinho():
     dadosProd = open(pathProdutos)
     data = json.loads(dadosProd.read())
     return filtrar(data, 'Monitor')
+
+@app.get("/produtos/Headset")
+def getCadeira():
+    dadosProd = open(pathProdutos)
+    data = json.loads(dadosProd.read())
+    return filtrar(data, 'Headset')
 
 @app.get("/carrinho")
 def getCarrinho():
