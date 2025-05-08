@@ -147,4 +147,21 @@ async function apagarCarrinho() {
 
 }
 
+async function alterarQtdProduto(id, dataCar, op) {
+    try {
+        const prod = dataCar.find(prod => prod.id == id )
+        if( prod.qtd == 1 && op == '-'){
+        
+        }
+        else if( op == '-' || op == '+'){
+            if(op=='-') prod.qtd-=1;
+            else prod.qtd+=1;
+            const res=await fetch(`http://127.0.0.1:8000/carrinho/${id}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(prod)})
+            getCarrinho()
+        }
+    } catch (error) {
+        
+    }
+}
+
 getCarrinho();
