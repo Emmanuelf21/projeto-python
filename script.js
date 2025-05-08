@@ -20,6 +20,19 @@ async function getCarrinho() {
         btnCancelar.addEventListener('click', () =>{
                 apagarCarrinho()
             });
+
+        const btnsMenosQtd = document.querySelectorAll(".menos");
+        btnsMenosQtd.forEach(btn => {
+            btn.addEventListener('click', () =>{
+                alterarQtdProduto(btn.getAttribute('id'), dataCar.carrinho, '-')
+            });
+        });
+        const btnsMaisQtd = document.querySelectorAll(".mais");
+        btnsMaisQtd.forEach(btn => {
+            btn.addEventListener('click', () =>{
+                alterarQtdProduto(btn.getAttribute('id'), dataCar.carrinho, '+')
+            });
+        });
     }
     catch(error){
         console.error("Erro ao buscar dados:", error);
