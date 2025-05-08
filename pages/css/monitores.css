@@ -1,40 +1,16 @@
-<<<<<<< HEAD
-.card {
-=======
 .card{
->>>>>>> ce2fc428cfdbffb4a875248a9aaa151b4012da33
     width: 200px;
     height: 460px;
     justify-content: flex-start;
     gap: 30px;
 }
 
-<<<<<<< HEAD
-.card img {
-=======
 .card img{
->>>>>>> ce2fc428cfdbffb4a875248a9aaa151b4012da33
     width: 200px;
     height: 200px;
     background: white;
     object-fit: contain;
 }
-<<<<<<< HEAD
-
-.card .flex-column {
-    gap: 10px;
-}
-
-.card p {
-    color: #adadad;
-}
-
-.card .preco {
-    font-size: 1.2rem;
-}
-
-.container-ssd {
-=======
 .card .flex-column{
     gap: 10px;
     
@@ -48,8 +24,7 @@
     font-size: 1.2rem;
 }
 
-.container-ssd{
->>>>>>> ce2fc428cfdbffb4a875248a9aaa151b4012da33
+.container-monitores{
     width: 70%;
     flex-wrap: wrap;
     margin: auto;
@@ -60,37 +35,21 @@
     padding: 20px 0px;
 }
 
-<<<<<<< HEAD
-.container-ssd h2 {
-    text-align: center;
-}
-
-.container-produtos .card {
-=======
-.container-ssd h2{
+.container-monitores h2{
     text-align: center;
 }
 .container-produtos .card{
->>>>>>> ce2fc428cfdbffb4a875248a9aaa151b4012da33
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
-.div-btn {
-=======
 .div-btn{
->>>>>>> ce2fc428cfdbffb4a875248a9aaa151b4012da33
     height: 100%;
     display: flex;
     align-items: end;
 }
 
-<<<<<<< HEAD
-button {
-=======
 button{
->>>>>>> ce2fc428cfdbffb4a875248a9aaa151b4012da33
     height: 30px;
     background: #bbbbbb70;
     border-radius: 30px;
@@ -100,12 +59,6 @@ button{
     transition: all 0.3s ease;
 }
 
-<<<<<<< HEAD
-button:hover {
-    background: #494949;
-}
-=======
 button:hover{
     background: #494949;
 }
->>>>>>> ce2fc428cfdbffb4a875248a9aaa151b4012da33

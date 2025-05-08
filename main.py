@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import json
 from produto import Produto
+from prodCarrinho import ProdCarrinho
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -66,9 +67,22 @@ def postCarrinho(): #adicionar produto no carrinho
 
 
 @app.put("/carrinho")
-def putCarrinho(produto: Produto): #Atualizar a quantidade (qtd)
+def putCarrinho(produto: ProdCarrinho): #Atualizar a quantidade (qtd)
     dadosCar = open(pathCarrinho)
     data = json.loads(dadosCar.read())
+    for prod in data['carrinho']:
+        if prod.id == produto.id:
+            pos = data['carrinho'].index(prod)
+            data['carrinho'].pop(pos)
+            data['carrinho'].insert(pos, novoProd)
+
+            f = open(pathCarrinho,'w')
+            f.write(json.dumps(data))
+            f.close
+
+            return data['carrinho']
+        else:
+            return data['carrinho']
     #Terminar o put
     
 @app.delete("/carrinho/{id}")
