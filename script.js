@@ -6,17 +6,58 @@ async function getCarrinho() {
 
         const resCar = await fetch("http://127.0.0.1:8000/carrinho");
         const dataCar = await resCar.json();
-    
+
+        gerarCarrinho(dataCar);
+
         const btnsCard = document.querySelectorAll(".btn-card");
         btnsCard.forEach(btn => {
             btn.addEventListener('click', () =>{
                 adicionarCarrinho(btn.getAttribute('id'), data.produtos, dataCar)
             });
         });
+
+        const btnCancelar = document.querySelector(".btn-cancelar");
+        btnCancelar.addEventListener('click', () =>{
+                apagarCarrinho()
+            });
     }
     catch(error){
         console.error("Erro ao buscar dados:", error);
     }
+}
+
+async function gerarCarrinho(dataCar) {
+    
+    const htmlCarrinho = document.querySelector("#carrinho");
+    const produtosCarrinho = document.querySelector(".carrinho-produtos");
+    produtosCarrinho.innerHTML = '';
+
+    visibilidadeCarrinho(htmlCarrinho, dataCar);
+    let somaPreco = 0;
+
+    for (const produtoCar of dataCar.carrinho) {
+        somaPreco += produtoCar.preco * produtoCar.qtd
+        console.log(produtoCar)
+        produtosCarrinho.innerHTML+=`
+        <span id=${produtoCar.id} class="mini-card">
+            <img src=./imagens/${produtoCar.imagem} alt="">
+            <h3>${produtoCar.nome}</h3>
+            <p>R$ ${produtoCar.preco}</p>
+            <div class='flex'>
+                <button id=${produtoCar.id} class='menos'>-</button>
+                <p>${produtoCar.qtd}</p>
+                <button id=${produtoCar.id} class='mais'>+</button>
+            </div>
+        </span>`
+    }
+    
+    const precoTotal = document.querySelector(".carrinho-preco");
+    precoTotal.innerHTML = `
+    <p>R$ ${somaPreco.toFixed(2)}</p>
+    <button class="btn-compra">Comprar</button>
+    <button class="btn-cancelar">Cancelar</button>
+    `
+
 }
 
 function isEmpty(dataCar) {
@@ -46,7 +87,7 @@ async function adicionarCarrinho(id, produtos, dataCar) {
     if(!existeNoCarrinho){
         for(const prod of produtos){
             if(prod['id']==id){
-                const response = await fetch("https://127.0.0.1:8000/carrinho", {
+                const response = await fetch("http://127.0.0.1:8000/carrinho", {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -77,6 +118,20 @@ async function refresh() {
     setTimeout(() => {
         window.location.reload();
     }, 10);
+}
+
+async function apagarCarrinho() {
+    fetch('http://127.0.0.1:8000/carrinho', {
+        method: 'DELETE',
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Carrinho deletado:', data);
+      })
+      .catch(error => {
+        console.error('Erro ao deletar o carrinho:', error);
+      });
+
 }
 
 getCarrinho();
