@@ -40,6 +40,13 @@ def getCarrinho():
     data = json.loads(dadosProd.read())
     return filtrar(data, 'Monitor')
 
+@app.get("/produtos/SSD")
+def getCarrinho():
+    dadosProd = open(pathProdutos)
+    data = json.loads(dadosProd.read())
+    return filtrar(data, 'SSD')
+
+
 @app.get("/produtos/Headset")
 def getCadeira():
     dadosProd = open(pathProdutos)
