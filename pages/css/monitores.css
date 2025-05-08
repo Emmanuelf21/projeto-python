@@ -24,7 +24,7 @@
     font-size: 1.2rem;
 }
 
-.container-ssd{
+.container-monitores{
     width: 70%;
     flex-wrap: wrap;
     margin: auto;
@@ -35,7 +35,7 @@
     padding: 20px 0px;
 }
 
-.container-ssd h2{
+.container-monitores h2{
     text-align: center;
 }
 .container-produtos .card{
