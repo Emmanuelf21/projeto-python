@@ -7,10 +7,10 @@
  - Link de acesso do host local: http://127.0.0.1:8000/docs
 <hr>
 
-##Integrantes
+## Integrantes
  - Emmanuel Franco (monitor)
  - João Henrique (monitor)
- - Matheus (Scrum Master)
+ - Matheus Profeta (Scrum Master)
  - Romulo
  - Isabella
 
