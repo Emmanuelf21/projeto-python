@@ -168,8 +168,53 @@
             "imagem":"MonitorTGT.jpg",
             "preco":  819.99,
             "descricao": "Monitor Gamer TGT Altay TS4, 27 Pol, IPS, FHD, 1ms, 180Hz, FreeSync, HDMI/DP, TGT-ATTS4-BL02"
-        }
+        },
 
+
+        {
+            "id": 21,
+            "nome": "SSD Corsair MP600 CORE XT",
+            "categoria": "SSD",
+            "imagem":"SSD_Corsair_MP600_CORE_XT.jpg.jpg",
+            "preco":  1899.99,
+            "descricao": "SSD Corsair MP600 CORE XT, 4TB, PCIe Gen 4.0 x4 NVMe M.2, Leitura: 5000MB/s e Gravação: 4400MB/s, Preto - CSSD-F4000GBMP600CXT"
+        },
+
+        {
+            "id": 22,
+            "nome": "SSD Samsung 990 Pro",
+            "categoria": "SSD",
+            "imagem":"SSD_Samsung_990_Pro.jpg",
+            "preco":  2603.07,
+            "descricao": "Ssd samsung 990 pro 4tb nvme m.2 2280 leitura até 7450mb/s gravação até 6900mb/s interno - mz-v9p4t0b/am"
+        },
+
+        {
+            "id": 23,
+            "nome": "SSD Corsair MP700 Pro",
+            "categoria": "SSD",
+            "imagem":"SSD_Corsair_MP700_Pro.jpg",
+            "preco":  5083.99,
+            "descricao": "SSD Corsair MP700 Pro, 4TB, M.2 NVMe, Leitura 12400MB/s e Gravação 11800MB/s, Preto - CSSD-F4000GBMP700PRO"
+        },
+
+        {
+            "id": 24,
+            "nome": "SSD WD Blue SN5000 NVMe",
+            "categoria": "SSD",
+            "imagem":"SSD_WD_Blue_SN5000_NVMe.jpg",
+            "preco":  2199.99,
+            "descricao": "SSD WD Blue SN5000 NVMe, 4TB,M.2 PCLe, Gen4, nCache 4.0, Leitura 5.500MB/s e Gravação 5.000MB/s - WDS400T4B0E"
+        },
+
+        {
+            "id": 25,
+            "nome": "XPG SSD GAMMIX S70",
+            "categoria": "SSD",
+            "imagem":"XPG_SSD_GAMMIX_S70.jpg",
+            "preco":  2613.00,
+            "descricao": "XPG SSD interno para jogos GAMMIX S70 Blade PCIe Gen4 M.2 2280 de 4 TB até 7.400 MB/s - Funciona com PlayStation 5/PS5 (AGAMMIXS70B-4T-CS) "
+        }
     ]
 
 }

@@ -33,13 +33,16 @@ body{
     gap: 20px;
 }
 .logo{
-    background-image: url('./imagens/Gemini_Generated_Image_7u8zv7u8zv7u8zv7.png');
+    /* background-image: url('./imagens/LOGO.jpg'); */
     width: 400px;
-    height: 100px;
-    background-size: contain;
+    height: fit-content;
+    padding: 20px;
     background-repeat: no-repeat;
 }
-
+.logo h2{
+    width: fit-content; 
+    margin: auto;   
+}
 .container-cabecalho .flex-column .links
 {
     width: fit-content;
@@ -53,5 +56,103 @@ body{
 {
     text-decoration: none;
     color: white;
+}
+
+.container-cabecalho .flex-column .links a:hover
+{
+    color: #f8e80b;
+}
+
+.carrinho{
+    width: 10%;
+    background: #292929;
+    height: 70%;
+    position: fixed;
+    right: 0;
+    top: 15%;
+    flex-direction: column;
+    gap: 30px;
+    padding: 2rem 0 0 2rem;
+    border-top-left-radius: 30px;
+}
+.carrinho .carrinho-produtos{
+    overflow-y: scroll;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+.oculto{
+   display: none;
+}
+
+.visivel{
+   display: flex;
+}
+
+.mini-card{
+   width: 100%;
+   height: fit-content;
+   position: relative;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap:10px;
+   align-items: center;
+}
+
+.mini-card h3{
+    font-size: 1rem;
+}
+
+.mini-card img{
+   width: 100px;
+}
+
+.mini-card>div{
+   align-items: center;
+   width: 90px;
+}
+
+.mini-card>div button{
+   width: 2rem;
+   height: 2rem;
+   border-radius: 50%;
+   cursor: pointer;
+   border: none;
+   background: #eee;
+   text-align: center;
+   color: #000;
+}
+
+
+.carrinho .carrinho-preco{
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    position: fixed;
+    top: 70%;
+    border-top: 1px solid #fff;
+    padding-top: 7px;
+}
+
+.carrinho .carrinho-preco .btn-compra{
+    background: #4e4e4e;
+    border-radius: 10px;
+    height: 25px;
+}
+
+.carrinho .carrinho-preco .btn-cancelar{
+    background: #fd0505c5;
+    border-radius: 10px;
+    height: 25px;
+    border: 2px solid #690202;
+}
+
+.carrinho .carrinho-preco .btn-cancelar,
+.carrinho .carrinho-preco .btn-compra{
+    cursor: pointer;
 }
 

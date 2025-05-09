@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import json
 from produto import Produto
+from prodCarrinho import ProdCarrinho
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -21,7 +22,7 @@ def getProdutos():
     data = json.loads(dadosProd.read())
     return data
 
-@app.get("/produtos/teclados")
+@app.get("/produtos/Teclados")
 def getTeclados():
     dadosProd = open(pathProdutos)
     data = json.loads(dadosProd.read())
@@ -31,7 +32,7 @@ def getTeclados():
 def getCadeira():
     dadosProd = open(pathProdutos)
     data = json.loads(dadosProd.read())
-    return filtrar(data, 'Cadeiras')
+    return filtrar(data, 'Cadeira')
   
 #Adicionar o get de cada categoria de produtos
 @app.get("/produtos/Monitor")
@@ -39,6 +40,19 @@ def getCarrinho():
     dadosProd = open(pathProdutos)
     data = json.loads(dadosProd.read())
     return filtrar(data, 'Monitor')
+
+@app.get("/produtos/SSD")
+def getCarrinho():
+    dadosProd = open(pathProdutos)
+    data = json.loads(dadosProd.read())
+    return filtrar(data, 'SSD')
+
+
+@app.get("/produtos/Headset")
+def getCadeira():
+    dadosProd = open(pathProdutos)
+    data = json.loads(dadosProd.read())
+    return filtrar(data, 'Headset')
 
 @app.get("/carrinho")
 def getCarrinho():
@@ -52,11 +66,25 @@ def postCarrinho(): #adicionar produto no carrinho
     data = json.loads(dadosCar.read())
 
 
-@app.put("/carrinho")
-def putCarrinho(produto: Produto): #Atualizar a quantidade (qtd)
-    dadosCar = open(pathCarrinho)
-    data = json.loads(dadosCar.read())
-    #Terminar o put
+@app.put("/carrinho/{id}")
+def att_carrinho(attProd: ProdCarrinho):
+    dadosProd = open(pathCarrinho)
+    data = json.loads(dadosProd.read())
+    
+    novoProd = attProd.dict()
+    
+    for prod in data['carrinho']:
+        if prod['id']==novoProd['id']:
+            pos = data['carrinho'].index(prod)
+            
+    data['carrinho'].pop(pos)
+    data['carrinho'].insert(pos, novoProd)
+    
+    f = open(pathCarrinho, 'w')
+    f.write(json.dumps(data)) 
+    f.close
+    
+    return {"status": 'Produto atualizado'}
     
 @app.delete("/carrinho/{id}")
 def deletePCar(id: int): #deletar um produto do carrinho
