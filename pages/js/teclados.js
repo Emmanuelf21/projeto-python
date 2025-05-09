@@ -4,7 +4,6 @@ async function getData() {
         const data = await res.json();
 
         const container = document.querySelector(".container-teclados");
-
         data.forEach(teclado => {
             container.innerHTML += `
             <div class="card flex-column">

@@ -2,9 +2,8 @@ async function getData() {
     try{
         const res = await fetch("http://127.0.0.1:8000/produtos/Headset");
         const data = await res.json();
-
         const container = document.querySelector(".container-headset");
-
+        console.log(data)
         data.forEach(headsets => {
             container.innerHTML += `
             <div class="card flex-column">
