@@ -90,6 +90,14 @@ def att_carrinho(attProd: ProdCarrinho):
 def deletePCar(id: int): #deletar um produto do carrinho
     dadosCar = open(pathCarrinho)
     data = json.loads(dadosCar.read())
+
+    for prod in data['carrinho']:
+        if prod['id']==id:
+            data['carrinho'].remove(prod)
+
+    f = open(pathCarrinho, 'w')
+    f.write(json.dumps(data))
+    f.close
     # Terminar o Delete
     
 @app.delete("/carrinho")
