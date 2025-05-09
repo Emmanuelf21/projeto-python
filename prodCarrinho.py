@@ -4,7 +4,7 @@ class ProdCarrinho(BaseModel):
     id:int
     nome:str
     categoria:str
-    image:str
+    imagem:str
     preco:float
     descricao:str
     qtd:int

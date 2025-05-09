@@ -1,9 +1,1 @@
-{"carrinho": [{
-    "id": 1,
-    "nome": "Teclado HyperX Alloy Origins",
-    "categoria": "Teclado",
-    "imagem": "hyperx.jpg",
-    "preco": 599.99,
-    "descricao": "Teclado Mecanico Gamer HyperX Alloy Origins, RGB, ABNT2, Switch Red, Preto, 4P4F6A2AC4",
-    "qtd": 1
-}]}
+{"carrinho": [{"id": 1, "nome": "Teclado HyperX Alloy Origins", "categoria": "Teclado", "imagem": "hyperx.jpg", "preco": 599.99, "descricao": "Teclado Mecanico Gamer HyperX Alloy Origins, RGB, ABNT2, Switch Red, Preto, 4P4F6A2AC4", "qtd": 1}]}
