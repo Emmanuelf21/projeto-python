@@ -1,6 +1,5 @@
-
 async function getCarrinho() {
-    try{
+    try {
         const res = await fetch("http://127.0.0.1:8000");
         const data = await res.json();
 
@@ -11,23 +10,35 @@ async function getCarrinho() {
 
         const btnsCard = document.querySelectorAll(".btn-card");
         btnsCard.forEach(btn => {
-            btn.addEventListener('click', () =>{
+            btn.addEventListener('click', () => {
                 adicionarCarrinho(btn.getAttribute('id'), data.produtos, dataCar)
             });
         });
 
         const btnCancelar = document.querySelector(".btn-cancelar");
-        btnCancelar.addEventListener('click', () =>{
-                apagarCarrinho()
+        btnCancelar.addEventListener('click', () => {
+            apagarCarrinho()
+        });
+
+        const btnsMenosQtd = document.querySelectorAll(".menos");
+        btnsMenosQtd.forEach(btn => {
+            btn.addEventListener('click', () => {
+                alterarQtdProduto(btn.getAttribute('id'), dataCar, '-')
             });
-    }
-    catch(error){
+        });
+        const btnsMaisQtd = document.querySelectorAll(".mais");
+        btnsMaisQtd.forEach(btn => {
+            btn.addEventListener('click', () => {
+                alterarQtdProduto(btn.getAttribute('id'), dataCar, '+')
+            });
+        });
+    } catch (error) {
         console.error("Erro ao buscar dados:", error);
     }
 }
 
 async function gerarCarrinho(dataCar) {
-    
+
     const htmlCarrinho = document.querySelector("#carrinho");
     const produtosCarrinho = document.querySelector(".carrinho-produtos");
     produtosCarrinho.innerHTML = '';
@@ -38,7 +49,7 @@ async function gerarCarrinho(dataCar) {
     for (const produtoCar of dataCar.carrinho) {
         somaPreco += produtoCar.preco * produtoCar.qtd
         console.log(produtoCar)
-        produtosCarrinho.innerHTML+=`
+        produtosCarrinho.innerHTML += `
         <span id=${produtoCar.id} class="mini-card">
             <img src=./imagens/${produtoCar.imagem} alt="">
             <h3>${produtoCar.nome}</h3>
@@ -50,7 +61,7 @@ async function gerarCarrinho(dataCar) {
             </div>
         </span>`
     }
-    
+
     const precoTotal = document.querySelector(".carrinho-preco");
     precoTotal.innerHTML = `
     <p>R$ ${somaPreco.toFixed(2)}</p>
@@ -61,32 +72,28 @@ async function gerarCarrinho(dataCar) {
 }
 
 function isEmpty(dataCar) {
-    if (Array.isArray(dataCar?.carrinho) && dataCar.carrinho.length > 0) {
+    if (Array.isArray(dataCar ?.carrinho) && dataCar.carrinho.length > 0) {
         return false;
-    }
-    else{
+    } else {
         return true;
     }
 }
 
-async function visibilidadeCarrinho(htmlCarrinho,dataCar) {
-    if(!isEmpty(dataCar) && htmlCarrinho.classList.contains('oculto'))
-    {
+async function visibilidadeCarrinho(htmlCarrinho, dataCar) {
+    if (!isEmpty(dataCar) && htmlCarrinho.classList.contains('oculto')) {
         htmlCarrinho.classList.remove('oculto');
         htmlCarrinho.classList.add('visivel');
-    }
-    else if(htmlCarrinho.classList.contains('visivel'))
-    {
+    } else if (htmlCarrinho.classList.contains('visivel')) {
         htmlCarrinho.classList.add('oculto');
         htmlCarrinho.classList.remove('visivel');
     }
 }
 
 async function adicionarCarrinho(id, produtos, dataCar) {
-    const existeNoCarrinho = verificarCarrinho(id,dataCar);
-    if(!existeNoCarrinho){
-        for(const prod of produtos){
-            if(prod['id']==id){
+    const existeNoCarrinho = verificarCarrinho(id, dataCar);
+    if (!existeNoCarrinho) {
+        for (const prod of produtos) {
+            if (prod['id'] == id) {
                 const response = await fetch("http://127.0.0.1:8000/carrinho", {
                     method: 'POST',
                     headers: {
@@ -104,12 +111,11 @@ async function adicionarCarrinho(id, produtos, dataCar) {
     }
 }
 
-function verificarCarrinho(id, dataCar){
+function verificarCarrinho(id, dataCar) {
     const prod = dataCar.carrinho.find(prod => prod.id == id)
-    if(prod){
+    if (prod) {
         return true;
-    }
-    else{
+    } else {
         return false;
     }
 }
@@ -122,33 +128,51 @@ async function refresh() {
 
 async function apagarCarrinho() {
     fetch('http://127.0.0.1:8000/carrinho', {
-        method: 'DELETE',
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Carrinho deletado:', data);
-      })
-      .catch(error => {
-        console.error('Erro ao deletar o carrinho:', error);
-      });
+            method: 'DELETE',
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Carrinho deletado:', data);
+        })
+        .catch(error => {
+            console.error('Erro ao deletar o carrinho:', error);
+        });
 
 }
 
-async function alterarQtdProduto(id, dataCar, op) {
-    try {
-        const prod = dataCar.find(prod => prod.id == id )
-        if( prod.qtd == 1 && op == '-'){
+async function alterarQtdProduto(id,dataCar,op) {
+
+        console.log('entrou na function');
+        const prod = dataCar['carrinho'].find(prod => prod.id == id);
         
+        if(prod.qtd==1 && op=='-'){
+            const response = await fetch(`http://127.0.0.1:8000/carrinho/${id}`,{
+                method: 'DELETE',  
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(prod)
+            })
+            const data = await response.json();
+            console.log(data);
         }
-        else if( op == '-' || op == '+'){
+        else if(op=='-' || op=='+'){
             if(op=='-') prod.qtd-=1;
             else prod.qtd+=1;
-            const res=await fetch(`http://127.0.0.1:8000/carrinho/${id}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(prod)})
-            getCarrinho()
+            
+            const response = await fetch(`http://127.0.0.1:8000/carrinho/${id}`,{
+                method: 'PUT',  
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(prod)
+            })
+            const data = await response.json();
+            // console.log(data);
         }
-    } catch (error) {
-        
-    }
+        refresh();
+    
+
 }
 
 getCarrinho();
