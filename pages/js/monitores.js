@@ -5,17 +5,17 @@ async function getData() {
 
         const container = document.querySelector("container-monitor");
     
-              data.forEach((monitor) => {
+              data.forEach((Monitor) => {
                 container.innerHTML += `
                   <div class="card flex-column">
-                    <img src="../imagens/${monitor.imagem}" alt="${monitor.nome}">
+                    <img src="../imagens/${Monitor.imagem}" alt="${Monitor.nome}">
                     <div class="flex-column">
-                      <h4>${monitor.nome}</h4>
-                      <p>${monitor.descricao}</p>
-                      <p class="preco">R$ ${monitor.preco.toFixed(2)}</p>
+                      <h4>${Monitor.nome}</h4>
+                      <p>${Monitor.descricao}</p>
+                      <p class="preco">R$ ${Monitor.preco.toFixed(2)}</p>
                     </div>
-                    <div class="div-btn">
-                      <button id=${monitor.id}>Adicionar ao carrinho</button>
+                    <div class ="div-btn">
+                      <button id=${Monitor.id}>Adicionar ao carrinho</button>
                     </div>
                   </div>
                 `;
