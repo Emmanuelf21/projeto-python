@@ -1,6 +1,6 @@
 async function getData() {
     try{
-        const res = await fetch("http://127.0.0.1:8000/produtos/Headsets");
+        const res = await fetch("http://127.0.0.1:8000/produtos/Headset");
         const data = await res.json();
 
         const container = document.querySelector(".container-headsets");
