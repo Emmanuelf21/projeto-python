@@ -66,24 +66,25 @@ def postCarrinho(): #adicionar produto no carrinho
     data = json.loads(dadosCar.read())
 
 
-@app.put("/carrinho")
-def putCarrinho(produto: ProdCarrinho): #Atualizar a quantidade (qtd)
-    dadosCar = open(pathCarrinho)
-    data = json.loads(dadosCar.read())
+@app.put("/carrinho/{id}")
+def att_carrinho(attProd: ProdCarrinho):
+    dadosProd = open(pathCarrinho)
+    data = json.loads(dadosProd.read())
+    
+    novoProd = attProd.dict()
+    
     for prod in data['carrinho']:
-        if prod.id == produto.id:
+        if prod['id']==novoProd['id']:
             pos = data['carrinho'].index(prod)
-            data['carrinho'].pop(pos)
-            data['carrinho'].insert(pos, novoProd)
-
-            f = open(pathCarrinho,'w')
-            f.write(json.dumps(data))
-            f.close
-
-            return data['carrinho']
-        else:
-            return data['carrinho']
-    #Terminar o put
+            
+    data['carrinho'].pop(pos)
+    data['carrinho'].insert(pos, novoProd)
+    
+    f = open(pathCarrinho, 'w')
+    f.write(json.dumps(data)) 
+    f.close
+    
+    return {"status": 'Produto atualizado'}
     
 @app.delete("/carrinho/{id}")
 def deletePCar(id: int): #deletar um produto do carrinho
