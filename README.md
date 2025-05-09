@@ -10,8 +10,8 @@
 ##Integrantes
  - Emmanuel Franco (monitor)
  - João Henrique (monitor)
- - Romulo
  - Matheus (Scrum Master)
+ - Romulo
  - Isabella
 
 <hr>
