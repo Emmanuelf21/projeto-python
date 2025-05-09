@@ -106,8 +106,9 @@ async function adicionarCarrinho(id, produtos, dataCar) {
                 console.log(data);
             }
         }
-        refresh();
+        // refresh();
         // gerarCarrinho(dataCar);
+        getCarrinho();
     }
 }
 
@@ -140,39 +141,37 @@ async function apagarCarrinho() {
 
 }
 
-async function alterarQtdProduto(id,dataCar,op) {
+async function alterarQtdProduto(id, dataCar, op) {
 
-        console.log('entrou na function');
-        const prod = dataCar['carrinho'].find(prod => prod.id == id);
-        
-        if(prod.qtd==1 && op=='-'){
-            const response = await fetch(`http://127.0.0.1:8000/carrinho/${id}`,{
-                method: 'DELETE',  
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(prod)
-            })
-            const data = await response.json();
-            console.log(data);
-        }
-        else if(op=='-' || op=='+'){
-            if(op=='-') prod.qtd-=1;
-            else prod.qtd+=1;
-            
-            const response = await fetch(`http://127.0.0.1:8000/carrinho/${id}`,{
-                method: 'PUT',  
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(prod)
-            })
-            const data = await response.json();
-            // console.log(data);
-        }
-        refresh();
-    
+    console.log('entrou na function');
+    const prod = dataCar['carrinho'].find(prod => prod.id == id);
 
+    if (prod.qtd == 1 && op == '-') {
+        const response = await fetch(`http://127.0.0.1:8000/carrinho/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(prod)
+        })
+        const data = await response.json();
+        console.log(data);
+    } else if (op == '-' || op == '+') {
+        if (op == '-') prod.qtd -= 1;
+        else prod.qtd += 1;
+
+        const response = await fetch(`http://127.0.0.1:8000/carrinho/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(prod)
+        })
+        const data = await response.json();
+        // console.log(data);
+    }
+    // refresh();
+    getCarrinho();
 }
 
 getCarrinho();

@@ -61,9 +61,17 @@ def getCarrinho():
     return data
 
 @app.post("/carrinho") 
-def postCarrinho(): #adicionar produto no carrinho
+def postCarrinho(prod: Produto): #adicionar produto no carrinho
     dadosCar = open(pathCarrinho)
     data = json.loads(dadosCar.read())
+    
+    novoProd = prod.dict()
+    novoProd['qtd'] = 1
+    data['carrinho'].append(novoProd)
+    
+    f = open(pathCarrinho, 'w')
+    f.write(json.dumps(data))
+    f.close
 
 
 @app.put("/carrinho/{id}")
