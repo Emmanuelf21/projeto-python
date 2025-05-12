@@ -1,4 +1,7 @@
 # projeto-python
+## Aplicação do Projeto
+A ideia por trás do projeto foi desenvolver a base de um e-commerce voltado para a comercialização de infoprodutos. O objetivo principal foi criar uma estrutura inicial sólida e escalável, que pudesse servir como ponto de partida para futuras expansões e personalizações da plataforma.
+
 ## Rodar o Projeto
  - Criar um ambiente virtual ‘venv’ utilizando o terminal:  'python -m venv venv'
  - Acessar o ambiente virtual (através do terminal Bash): 'source venv/scripts/activate'
